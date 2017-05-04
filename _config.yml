@@ -26,7 +26,7 @@ github_username:  danielhep
 
 # Build settings
 markdown: kramdown
-theme: cayman
+theme: Cayman
 gems:
   - jekyll-feed
 exclude:
