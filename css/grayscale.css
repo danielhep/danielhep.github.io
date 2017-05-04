@@ -3,6 +3,9 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+sup {
+  font-size: 10px;
+}
 body {
   width: 100%;
   height: 100%;
@@ -117,6 +120,7 @@ a:focus {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
+
 .intro {
   display: table;
   width: 100%;
@@ -124,8 +128,15 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-  background-color: black;
+  text-shadow: 2px 2px 0px black;
+  background:     
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)
+    ), 
+    url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+  background-color: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -140,6 +151,8 @@ a:focus {
 }
 .intro .intro-body .intro-text {
   font-size: 18px;
+  /*text-shadow: 0 0 5px black;*/
+
 }
 @media (min-width: 768px) {
   .intro {
