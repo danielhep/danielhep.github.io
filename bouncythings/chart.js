@@ -1,7 +1,23 @@
-require(['node_modules/chart.js/dist/Chart.min.js'], function(Chart) {
+require(['node_modules/chart.js/dist/Chart.min.js', 
+        'node_modules/mathjs/dist/math.min.js'], function(Chart, math) {
+            var myChart;
+
+    $(".form-control").blur(() => {
+        var startingAngle = math.eval($('#startingAngle').val());
+        var length = math.eval($('#length').val());
+        var stepSize = math.eval($('#stepSize').val());
+        var duration = math.eval($('#duration').val());
+
+        var data = generateData(startingAngle, length, stepSize, duration)
+
+        myChart.data.datasets[0].data = data;
+        myChart.update(500);
+    });
+
+
     var ctx = $("#myChart");
     var data = generateData(1.047, 1, .01, 5)
-    var myChart = new Chart(ctx, {
+    myChart = new Chart(ctx, {
         type: 'line',
         data: {
             datasets: [{
@@ -19,6 +35,8 @@ require(['node_modules/chart.js/dist/Chart.min.js'], function(Chart) {
         }
     });
 })
+
+
 
 function generateData(startingAngle, L, stepSize, duration) {
     var data = [{
