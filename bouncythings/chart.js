@@ -12,7 +12,7 @@ require(['node_modules/chart.js/dist/Chart.min.js',
 
         myChart.data.datasets[0].data = data;
         myChart.update(500);
-    });
+    }); 
 
 
     var ctx = $("#myChart");
