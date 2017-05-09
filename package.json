@@ -23,5 +23,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
+  },
+  "dependencies": {
+    "chart.js": "^2.5.0"
   }
 }
